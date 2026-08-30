@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacewar Gameplay Guide — Controls, Rules, Gravity & Hyperspace Tactics</title>
+  <meta name="description" content="Master Spacewar! gameplay: complete controls guide, rules, gravity physics, torpedo combat, hyperspace tactics, ship differences, and winning strategies.">
+  <meta name="keywords" content="spacewar gameplay, spacewar controls, spacewar rules, spacewar gravity, spacewar hyperspace, spacewar torpedo, spacewar tactics, spacewar how to play, spacewar needle wedge, spacewar strategy">
+  <meta name="author" content="spacewar.wiki">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.spacewar.wiki/gameplay.html">
+  <meta name="theme-color" content="#050508">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Spacewar Gameplay Guide — Controls, Rules & Tactics">
+  <meta property="og:description" content="Master Spacewar! gameplay: controls, gravity physics, torpedo combat, hyperspace, and winning strategies.">
+  <meta property="og:url" content="https://www.spacewar.wiki/gameplay.html">
+  <meta property="og:image" content="https://www.spacewar.wiki/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spacewar Gameplay Guide">
+  <meta name="twitter:description" content="Controls, rules, gravity, hyperspace, and winning tactics for Spacewar!">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%2339ff14' stroke-width='3'/><circle cx='50' cy='50' r='6' fill='%2339ff14'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.spacewar.wiki/"},{"@type":"ListItem","position":2,"name":"Gameplay","item":"https://www.spacewar.wiki/gameplay.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"How to Play Spacewar!","description":"Complete guide to Spacewar! gameplay, controls, rules, and tactics.","step":[{"@type":"HowToStep","name":"Choose Your Ship","text":"Select either the Needle (Player 1, slim profile) or Wedge (Player 2, wide profile)."},{"@type":"HowToStep","name":"Master Movement","text":"Use rotation and thrust to navigate. Ships have inertia — there is no friction in space."},{"@type":"HowToStep","name":"Use Gravity","text":"The central star pulls both ships. Use slingshot maneuvers to gain speed and outmaneuver your opponent."},{"@type":"HowToStep","name":"Fire Torpedoes","text":"Launch torpedoes at your opponent. Torpedoes travel straight and have limited range."},{"@type":"HowToStep","name":"Know When to Hyperspace","text":"When cornered, activate hyperspace to teleport randomly — but risk exploding on re-entry."}]}
+  </script>
+</head>
+<body>
+  <div class="starfield"></div>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><span class="nav-brand-icon" aria-hidden="true"></span><span>SPACEWAR.WIKI</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="gameplay.html" class="active">Gameplay</a></li>
+        <li><a href="play.html">Play Now</a></li>
+        <li><a href="steam.html">Steam FAQ</a></li>
+        <li><a href="legacy.html">Legacy</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Gameplay Guide</span>
+      </div>
+
+      <header class="page-header">
+        <h1>Gameplay Guide</h1>
+        <p class="page-lead">Everything you need to master Spacewar! — from basic controls to advanced gravity slingshots and hyperspace mind games.</p>
+      </header>
+
+      <!-- Objective -->
+      <section class="section" id="objective">
+        <h2>Game Objective</h2>
+        <p>
+          Spacewar! is a <strong>two-player competitive space combat game</strong>. Each player controls a
+          spaceship orbiting a central star. The goal is simple: <strong>destroy your opponent's ship</strong>
+          by hitting it with torpedoes, while avoiding being hit yourself, crashing into the central star,
+          or falling victim to a hyperspace mishap.
+        </p>
+        <p>
+          The game has no score limit, time limit, or rounds — players duel continuously, with destroyed
+          ships respawning to continue the fight. The true objective is <strong>bragging rights</strong>
+          among your fellow hackers.
+        </p>
+
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+            <span class="terminal-title">pdp-1: game_rules.txt</span>
+          </div>
+          <div class="terminal-body">
+            <span class="prompt">$</span> cat /usr/games/spacewar/rules.txt<br>
+            <span class="output">=== SPACEWAR! — COMBAT RULES ===</span><br>
+            <span class="highlight">1.</span> Two ships duel around a central star<br>
+            <span class="highlight">2.</span> Destroy opponent with torpedoes<br>
+            <span class="highlight">3.</span> Star gravity affects all ships<br>
+            <span class="highlight">4.</span> Collision with star = destruction<br>
+            <span class="highlight">5.</span> Hyperspace = random teleport + risk<br>
+            <span class="highlight">6.</span> Torpedoes have limited fuel<br>
+            <span class="highlight">7.</span> No friction — inertia is real<br>
+            <span class="output">=================================</span><br>
+            <span class="prompt">$</span> <span class="cursor"></span>
+          </div>
+        </div>
+
+        <div class="image-frame">
+          <img src="images/pdp1-display-closeup.jpg" alt="Spacewar! gameplay on the PDP-1 Type 30 CRT display showing the two ships, central star, and starfield background" loading="lazy">
+          <div class="image-caption">Live gameplay on the PDP-1 CRT — the Needle and Wedge duel around the central star, with the Expensive Planetarium starfield in the background</div>
+        </div>
+      </section>
+
+      <!-- Controls -->
+      <section class="section" id="controls">
+        <h2>Controls</h2>
+        <p>
+          The original Spacewar! was played with custom <strong>control boxes</strong> connected to the
+          PDP-1. Each player had a box with four controls. Modern emulators and remakes typically map these
+          to keyboard keys.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>&#9651; Player 1 — The Needle</h3>
+            <table>
+              <tr><th>Action</th><th>Original Control</th><th>Emulator Key</th></tr>
+              <tr><td>Rotate Left</td><td>Toggle switch L</td><td><code>A</code> or <code>&larr;</code></td></tr>
+              <tr><td>Rotate Right</td><td>Toggle switch R</td><td><code>D</code> or <code>&rarr;</code></td></tr>
+              <tr><td>Thrust</td><td>Button 1</td><td><code>W</code> or <code>&uarr;</code></td></tr>
+              <tr><td>Fire Torpedo</td><td>Button 2</td><td><code>Space</code> or <code>F</code></td></tr>
+              <tr><td>Hyperspace</td><td>Button 3</td><td><code>S</code> or <code>&darr;</code></td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <h3>&#9670; Player 2 — The Wedge</h3>
+            <table>
+              <tr><th>Action</th><th>Original Control</th><th>Emulator Key</th></tr>
+              <tr><td>Rotate Left</td><td>Toggle switch L</td><td><code>J</code> or <code>Keypad 4</code></td></tr>
+              <tr><td>Rotate Right</td><td>Toggle switch R</td><td><code>L</code> or <code>Keypad 6</code></td></tr>
+              <tr><td>Thrust</td><td>Button 1</td><td><code>I</code> or <code>Keypad 8</code></td></tr>
+              <tr><td>Fire Torpedo</td><td>Button 2</td><td><code>K</code> or <code>Keypad 0</code></td></tr>
+              <tr><td>Hyperspace</td><td>Button 3</td><td><code>U</code> or <code>Keypad 2</code></td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3>&#128161; Control Tip</h3>
+          <p style="margin-bottom:0;">
+            On the original PDP-1, rotation was controlled by <strong>toggle switches</strong> that stayed
+            in position — you flipped left to rotate continuously, and flipped back to center to stop.
+            Modern emulators use <strong>momentary keys</strong>, so you'll need to tap or hold to achieve
+            the same effect. This takes some getting used to!
+          </p>
+        </div>
+      </section>
+
+      <!-- Ships -->
+      <section class="section" id="ships">
+        <h2>The Two Ships</h2>
+        <p>
+          Spacewar! features two distinct player ships, each rendered as a vector graphic on the CRT.
+          While they handle identically in terms of thrust, rotation, and torpedo speed, their different
+          shapes create meaningful visual and tactical differences.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>&#9651; The Needle (Player 1)</h3>
+            <p><span class="badge badge-cyan">Slim Profile</span> <span class="badge badge-green">Harder to Hit</span></p>
+            <p>
+              The Needle is a long, slender spacecraft with a pointed nose and two tail fins. Its thin
+              profile makes it a <strong>smaller target</strong> for incoming torpedoes, especially when
+              viewed head-on or from behind. Experienced players often prefer the Needle for defensive play.
+            </p>
+            <ul>
+              <li><strong>Visual:</strong> Slim, needle-shaped with pointed nose</li>
+              <li><strong>Hitbox:</strong> Narrow — harder to hit from front/back</li>
+              <li><strong>Playstyle:</strong> Defensive, precision-oriented</li>
+              <li><strong>Weakness:</strong> Can be harder to see during fast maneuvers</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>&#9670; The Wedge (Player 2)</h3>
+            <p><span class="badge badge-amber">Wide Profile</span> <span class="badge badge-green">Easier to Track</span></p>
+            <p>
+              The Wedge is a broad, triangular spacecraft with a wide body. While it presents a
+              <strong>larger target</strong>, many players find the Wedge easier to track visually during
+              high-speed orbital combat. Its distinctive shape also makes it easier to judge orientation
+              at a glance.
+            </p>
+            <ul>
+              <li><strong>Visual:</strong> Wide triangular wedge shape</li>
+              <li><strong>Hitbox:</strong> Broader — easier to hit from the side</li>
+              <li><strong>Playstyle:</strong> Aggressive, visual tracking</li>
+              <li><strong>Weakness:</strong> Larger target profile</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Mechanics -->
+      <section class="section" id="mechanics">
+        <h2>Core Mechanics</h2>
+
+        <h3 id="gravity">&#127776; The Gravity Well</h3>
+        <p>
+          At the center of the screen sits a <strong>star</strong> that exerts a real gravitational pull
+          on both ships. This is not decorative — it is the single most important mechanic in the game.
+          The star's gravity:
+        </p>
+        <ul>
+          <li>Pulls both ships toward the center of the screen</li>
+          <li>Is stronger closer to the star (inverse square law)</li>
+          <li>Creates curved orbital trajectories — ships naturally fall into ellipses</li>
+          <li>Destroys any ship that collides with it (flies into the center)</li>
+        </ul>
+        <p>
+          Mastering gravity is the difference between a novice and an expert. Top players use
+          <strong>gravity slingshots</strong> — diving toward the star to gain speed, then curving
+          around it to launch at high velocity toward their opponent.
+        </p>
+
+        <h3 id="inertia">&#9889; Inertia &amp; Momentum</h3>
+        <p>
+          Spacewar! simulates <strong>Newtonian physics</strong>: there is no friction in space. When you
+          thrust, you accelerate in the direction your ship is facing. When you stop thrusting, you
+          <strong>continue drifting</strong> at your current velocity indefinitely (until gravity or a
+          collision changes it).
+        </p>
+        <p>
+          This means you cannot simply point at your opponent and hold thrust — you'll overshoot. You need
+          to <strong>plan your trajectory</strong>, thrust in short bursts, and use counter-thrust to slow
+          down or change direction.
+        </p>
+
+        <h3 id="torpedoes">&#128163; Torpedo Combat</h3>
+        <p>
+          Each ship can fire <strong>photon torpedoes</strong> — small glowing dots that travel in straight
+          lines from the nose of the ship. Key torpedo mechanics:
+        </p>
+        <ul>
+          <li><strong>Straight-line travel:</strong> Torpedoes are NOT affected by gravity — they travel in a straight line at constant speed</li>
+          <li><strong>Limited fuel:</strong> Each ship has a limited number of torpedoes. Fire wisely</li>
+          <li><strong>Finite lifetime:</strong> Torpedoes eventually fade from the screen after traveling a certain distance</li>
+          <li><strong>No friendly fire:</strong> Your own torpedoes cannot destroy you</li>
+          <li><strong>Instant destruction:</strong> A single torpedo hit destroys the target ship</li>
+        </ul>
+        <p>
+          Because torpedoes travel straight but ships move in curved gravity wells, <strong>leading your
+          target</strong> is essential. You must aim where your opponent <em>will be</em>, not where they
+          are.
+        </p>
+
+        <h3 id="hyperspace">&#128302; Hyperspace Jump</h3>
+        <p>
+          When cornered, outmaneuvered, or about to collide with the star, players can activate
+          <strong>hyperspace</strong> to teleport to a random location on the screen. This is a
+          <strong>high-risk, high-reward</strong> mechanic:
+        </p>
+        <ul>
+          <li><strong>Random teleport:</strong> Your ship reappears at a random position and orientation</li>
+          <li><strong>Explosion risk:</strong> Each hyperspace jump carries a probability of exploding on re-entry (approximately 25% in most versions)</li>
+          <li><strong>No control during jump:</strong> You cannot steer or fire while in hyperspace</li>
+          <li><strong>Limited uses:</strong> Some versions limit the number of hyperspace jumps per ship</li>
+        </ul>
+        <div class="highlight-box amber">
+          <h3>&#9888; Hyperspace Warning</h3>
+          <p style="margin-bottom:0;">
+            Hyperspace is a <strong>gamble</strong>, not an escape button. You might teleport to safety —
+            or you might explode, reappear inside the star, or materialize directly in front of your
+            opponent's torpedoes. Use it only when the alternative is certain destruction.
+          </p>
+        </div>
+      </section>
+
+      <!-- Advanced Tactics -->
+      <section class="section" id="tactics">
+        <h2>Advanced Tactics</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>&#127776; Gravity Slingshot</h3>
+            <p>Dive toward the star at high speed, let gravity curve your trajectory, and emerge at maximum velocity. Use this speed boost to chase down opponents or make rapid direction changes that defy simple prediction.</p>
+          </div>
+          <div class="card">
+            <h3>&#127919; Orbital Ambush</h3>
+            <p>Establish a stable orbit around the star and wait for your opponent to approach. From orbit, you can fire torpedoes tangentially — your orbital velocity adds to the torpedo speed, creating faster-than-normal shots.</p>
+          </div>
+          <div class="card">
+            <h3>&#128163; Torpedo Spread</h3>
+            <p>Instead of firing single shots, fire a spread of 3-5 torpedoes in slightly different directions as you rotate. This creates a wall of projectiles that's much harder to dodge, especially in the confined space near the star.</p>
+          </div>
+          <div class="card">
+            <h3>&#128302; Hyperspace Mind Games</h3>
+            <p>Use hyperspace not just to escape, but to reposition aggressively. If your opponent is chasing you, a well-timed jump can put you behind them — but only if you survive the re-entry roll. Fake a hyperspace attempt to make your opponent overcommit.</p>
+          </div>
+          <div class="card">
+            <h3>&#9889; Thrust Budgeting</h3>
+            <p>Thrust in short, controlled bursts rather than holding it down. Continuous thrust wastes fuel and makes your trajectory predictable. Master the "pulse and glide" rhythm — thrust to set up a trajectory, then glide while you aim and fire.</p>
+          </div>
+          <div class="card">
+            <h3>&#127919; Star Trap</h3>
+            <p>Position yourself between your opponent and the star, forcing them to either fly into the star's gravity well or take a long, predictable detour. If they dive toward the star, fire torpedoes along their escape trajectory — they'll have nowhere to go.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common Mistakes -->
+      <section class="section" id="mistakes">
+        <h2>Common Beginner Mistakes</h2>
+        <div class="highlight-box red">
+          <ol style="margin-bottom:0; padding-left:1.5em;">
+            <li style="margin-bottom:0.6em;"><strong>Holding thrust continuously</strong> — You'll accelerate out of control and crash. Use short bursts.</li>
+            <li style="margin-bottom:0.6em;"><strong>Ignoring gravity</strong> — The star will pull you in if you don't account for it. Always think about your orbital trajectory.</li>
+            <li style="margin-bottom:0.6em;"><strong>Firing directly at the opponent</strong> — They're moving. Lead your target based on their velocity and direction.</li>
+            <li style="margin-bottom:0.6em;"><strong>Overusing hyperspace</strong> — The explosion risk adds up. Save it for true emergencies.</li>
+            <li style="margin-bottom:0.6em;"><strong>Forgetting inertia</strong> — When you rotate, your velocity doesn't change direction with you. You'll keep drifting in your old direction until you counter-thrust.</li>
+            <li style="margin-bottom:0;"><strong>Chasing the opponent</strong> — Don't just follow them around the screen. Use gravity to cut them off and set up ambushes.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section" style="text-align:center;">
+        <p style="color:var(--text-secondary); margin-bottom:1em;">Ready to put these tactics into practice?</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+          <a href="play.html" class="btn">Play Spacewar Now &rarr;</a>
+          <a href="history.html" class="btn btn-cyan">Learn the History &rarr;</a>
+          <a href="faq.html" class="btn btn-amber">More Questions? &rarr;</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>SPACEWAR.WIKI</h4>
+          <p>A comprehensive guide to Spacewar! — the 1962 MIT classic that launched the video game industry.</p>
+        </div>
+        <div class="footer-col"><h5>Explore</h5><ul><li><a href="history.html">History</a></li><li><a href="gameplay.html">Gameplay</a></li><li><a href="play.html">Play Now</a></li><li><a href="legacy.html">Legacy</a></li></ul></div>
+        <div class="footer-col"><h5>Resources</h5><ul><li><a href="steam.html">Steam FAQ</a></li><li><a href="faq.html">General FAQ</a></li><li><a href="https://www.masswerk.at/spacewar/" target="_blank" rel="noopener">PDP-1 Emulator</a></li><li><a href="https://en.wikipedia.org/wiki/Spacewar!" target="_blank" rel="noopener">Wikipedia</a></li></ul></div>
+        <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="gameplay.html#controls">Controls</a></li><li><a href="gameplay.html#gravity">Gravity</a></li><li><a href="gameplay.html#hyperspace">Hyperspace</a></li><li><a href="gameplay.html#tactics">Tactics</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> spacewar.wiki &middot; All rights reserved</p>
+        <p>Not affiliated with Valve, MIT, or Digital Equipment Corporation</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+  <script src="js/app.js"></script>
+</body>
+</html>

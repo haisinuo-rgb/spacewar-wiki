@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacewar Wiki — The Original 1962 Video Game | History, Gameplay & Guide</title>
+  <meta name="description" content="Explore Spacewar, the 1962 MIT classic widely regarded as the first video game. Learn its history, gameplay rules, how to play today, and its lasting legacy.">
+  <meta name="keywords" content="spacewar, space war, spacewar 1962, spacewar game, spacewar steam, first video game, spacewar mit, spacewar pdp-1, steve russell spacewar, spacewar gameplay, spacewar history, spacewar guide, spacewar wiki">
+  <meta name="author" content="spacewar.wiki">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.spacewar.wiki/">
+  <meta name="theme-color" content="#050508">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spacewar Wiki — The Original 1962 Video Game">
+  <meta property="og:description" content="The complete guide to Spacewar (1962): history, gameplay, how to play, and its legacy as the first video game.">
+  <meta property="og:url" content="https://www.spacewar.wiki/">
+  <meta property="og:site_name" content="Spacewar Wiki">
+  <meta property="og:image" content="https://www.spacewar.wiki/images/og-cover.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spacewar Wiki — The Original 1962 Video Game">
+  <meta name="twitter:description" content="The complete guide to Spacewar (1962): history, gameplay, how to play, and its legacy.">
+  <meta name="twitter:image" content="https://www.spacewar.wiki/images/og-cover.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%2339ff14' stroke-width='3'/><circle cx='50' cy='50' r='6' fill='%2339ff14'/><line x1='50' y1='5' x2='50' y2='20' stroke='%2300f0ff' stroke-width='2'/><line x1='50' y1='80' x2='50' y2='95' stroke='%2300f0ff' stroke-width='2'/><line x1='5' y1='50' x2='20' y2='50' stroke='%2300f0ff' stroke-width='2'/><line x1='80' y1='50' x2='95' y2='50' stroke='%2300f0ff' stroke-width='2'/></svg>">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: VideoGame -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Spacewar!",
+    "alternateName": "Spacewar",
+    "description": "Spacewar! is a 1962 space combat video game developed for the PDP-1 at MIT by Steve Russell and others. It is widely considered one of the first and most influential video games ever made.",
+    "genre": ["Space combat simulation", "Vector graphics"],
+    "gamePlatform": ["PDP-1", "Steam"],
+    "datePublished": "1962-04-01",
+    "developer": {
+      "@type": "Organization",
+      "name": "MIT (Steve Russell, Martin Graetz, Wayne Wiitanen, and others)"
+    },
+    "url": "https://www.spacewar.wiki/",
+    "keywords": "spacewar, space war, first video game, 1962, MIT, PDP-1, steve russell"
+  }
+  </script>
+
+  <!-- Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.spacewar.wiki/"}
+    ]
+  }
+  </script>
+
+  <!-- FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Spacewar?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Spacewar! is a 1962 space combat video game developed at MIT for the PDP-1 computer. It is widely regarded as one of the first video games ever created and was hugely influential on the gaming industry."}
+      },
+      {
+        "@type": "Question",
+        "name": "Who created Spacewar?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Spacewar was primarily created by Steve 'Slug' Russell, with contributions from Martin Graetz, Wayne Wiitanen, and other students at the Massachusetts Institute of Technology (MIT) in 1961-1962."}
+      },
+      {
+        "@type": "Question",
+        "name": "Is Spacewar the first video game?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Spacewar is widely considered the first widely recognized and influential video game, though earlier experiments like Tennis for Two (1958) and the Cathode-Ray Tube Amusement Device (1947) predate it. Spacewar was the first to be widely distributed and played across multiple institutions."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do you play Spacewar?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Two players each control a spaceship (the Needle and the Wedge) orbiting a central star. Players use thrusters to maneuver, fire torpedoes at each other, and can use hyperspace to randomly teleport away from danger. The star's gravity affects both ships, and colliding with the star or a torpedo destroys a ship."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="starfield"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Spacewar Wiki Home">
+        <span class="nav-brand-icon" aria-hidden="true"></span>
+        <span>SPACEWAR.WIKI</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="gameplay.html">Gameplay</a></li>
+        <li><a href="play.html">Play Now</a></li>
+        <li><a href="steam.html">Steam FAQ</a></li>
+        <li><a href="legacy.html">Legacy</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Hero -->
+      <section class="hero" aria-label="Introduction">
+        <span class="hero-eyebrow">EST. 1962 &middot; MIT &middot; PDP-1</span>
+        <h1>SPACEWAR<span class="accent">!</span></h1>
+        <p class="hero-subtitle">
+          The original space combat video game. Born at MIT in 1962 on a PDP-1 minicomputer,
+          Spacewar! pioneered vector graphics, physics simulation, and multiplayer gaming —
+          launching an entire industry.
+        </p>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value">1962</span>
+            <span class="hero-stat-label">Year Released</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">PDP-1</span>
+            <span class="hero-stat-label">Original Platform</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">2P</span>
+            <span class="hero-stat-label">Local Multiplayer</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">1st</span>
+            <span class="hero-stat-label">Widely Played Video Game</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="history.html" class="btn">Explore History</a>
+          <a href="play.html" class="btn btn-cyan">Play Online</a>
+          <a href="gameplay.html" class="btn btn-amber">Gameplay Guide</a>
+        </div>
+      </section>
+
+      <!-- Quick Navigation Cards -->
+      <section class="section" aria-label="Explore topics">
+        <h2>Explore the Archive</h2>
+        <p class="section-intro">
+          Dive into every aspect of Spacewar — from its creation at MIT to its lasting impact
+          on the video game industry, and how you can play it today.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">&#128187;</span>
+            <h3>History &amp; Origins</h3>
+            <p>The complete story of Spacewar's creation at MIT in 1961-62. Meet Steve Russell, the PDP-1, and the hackers who invented video gaming.</p>
+            <a href="history.html" class="card-link">Read the history</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">&#127918;</span>
+            <h3>Gameplay Guide</h3>
+            <p>Master the controls, understand gravity physics, learn torpedo tactics, and use hyperspace to outmaneuver your opponent.</p>
+            <a href="gameplay.html" class="card-link">Learn to play</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">&#128640;</span>
+            <h3>Play Spacewar Today</h3>
+            <p>Play in your browser via emulators, find modern remakes, or run it on Steam. Everything you need to experience the original.</p>
+            <a href="play.html" class="card-link">Start playing</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">&#129302;</span>
+            <h3>Steam Spacewar FAQ</h3>
+            <p>What is Spacewar on Steam? Why is it in your library? Is it safe? Answers about AppID 480 and the piracy controversy.</p>
+            <a href="steam.html" class="card-link">Get answers</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">&#127942;</span>
+            <h3>Legacy &amp; Influence</h3>
+            <p>From the 1972 Intergalactic Spacewar Olympics to Nolan Bushnell's Computer Space and the birth of Atari — how Spacewar shaped gaming.</p>
+            <a href="legacy.html" class="card-link">Discover the legacy</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">&#10067;</span>
+            <h3>Frequently Asked Questions</h3>
+            <p>Who made Spacewar? Is it really the first video game? How does gravity work? Answers to the most common questions.</p>
+            <a href="faq.html" class="card-link">Browse FAQs</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- What is Spacewar -->
+      <section class="section" id="what-is">
+        <h2>What Is Spacewar?</h2>
+        <p>
+          <strong>Spacewar!</strong> (also written as <em>Spacewar</em> or <em>Space War</em>) is a
+          two-player space combat video game developed in 1961&ndash;1962 by <strong>Steve "Slug" Russell</strong>
+          and a group of fellow students at the <strong>Massachusetts Institute of Technology (MIT)</strong>.
+          It was written for the <strong>Digital Equipment Corporation PDP-1</strong> minicomputer and
+          displayed on a vector graphics CRT monitor.
+        </p>
+        <p>
+          In the game, two players each pilot a spaceship — the slender <strong>"Needle"</strong> and the
+          wedge-shaped <strong>"Wedge"</strong> — as they orbit a central star. The star's gravity pulls
+          both ships, creating dynamic orbital mechanics. Players fire <strong>torpedoes</strong> at each
+          other and can activate <strong>hyperspace</strong> to randomly teleport across the screen,
+          escaping danger at the risk of exploding on re-entry.
+        </p>
+        <p>
+          Spacewar! is <strong>widely regarded as the first video game</strong> to achieve widespread
+          recognition and distribution. While earlier experiments exist — including <em>Tennis for Two</em>
+          (1958) and the <em>Cathode-Ray Tube Amusement Device</em> (1947) — Spacewar was the first to
+          be copied, shared, and played across multiple computer labs, directly inspiring the founders of
+          Atari and the entire arcade game industry.
+        </p>
+
+        <div class="highlight-box">
+          <h3>&#128161; Key Fact</h3>
+          <p style="margin-bottom:0;">
+            Spacewar! was created by a group of MIT students in their spare time, using a $120,000 PDP-1
+            computer donated to the university by DEC founder Ken Olsen. It was never sold commercially —
+            it was shared freely among PDP-1 users, making it perhaps the first <strong>open-source video game</strong>.
+          </p>
+        </div>
+
+        <div class="image-frame">
+          <img src="images/spacewar-gameplay.jpg" alt="Spacewar! running on the restored PDP-1 at the Computer History Museum, showing the two ships and central star on the green phosphor CRT display" loading="lazy">
+          <div class="image-caption">Spacewar! in action on the restored PDP-1 at the Computer History Museum — the two ships (Needle &amp; Wedge) duel around the central star's gravity well</div>
+        </div>
+      </section>
+
+      <!-- Terminal: Game Specs -->
+      <section class="section" id="specs">
+        <h2>Technical Specifications</h2>
+        <div class="terminal" role="region" aria-label="Game specifications">
+          <div class="terminal-header">
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-title">pdp-1: spacewar.spec</span>
+          </div>
+          <div class="terminal-body">
+            <span class="prompt">$</span> cat /usr/games/spacewar/spec.txt<br>
+            <span class="output">========================================</span><br>
+            <span class="output">  SPACEWAR! — GAME SPECIFICATIONS</span><br>
+            <span class="output">========================================</span><br>
+            <span class="highlight">Title:</span>        Spacewar!<br>
+            <span class="highlight">Year:</span>         1962 (developed 1961-62)<br>
+            <span class="highlight">Platform:</span>     DEC PDP-1 minicomputer<br>
+            <span class="highlight">Display:</span>      Type 30 CRT, vector graphics<br>
+            <span class="highlight">Resolution:</span>   1024 &times; 1024 points<br>
+            <span class="highlight">Memory:</span>       9K words (18-bit each)<br>
+            <span class="highlight">Language:</span>     PDP-1 assembly / macro<br>
+            <span class="highlight">Players:</span>      2 (local, split controls)<br>
+            <span class="highlight">Genre:</span>        Space combat simulation<br>
+            <span class="highlight">Developer:</span>    Steve Russell &amp; MIT students<br>
+            <span class="highlight">Distribution:</span> Free, shared via paper tape<br>
+            <span class="output">========================================</span><br>
+            <span class="prompt">$</span> <span class="cursor"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ships -->
+      <section class="section" id="ships">
+        <h2>The Two Ships</h2>
+        <p class="section-intro">
+          Spacewar features two distinct player ships, each with unique handling characteristics and
+          visual designs rendered as vector graphics on the PDP-1's CRT display.
+        </p>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>&#9651; The Needle</h3>
+            <p><span class="badge badge-cyan">Player 1</span></p>
+            <p>
+              A slender, needle-shaped spacecraft with a pointed nose and wide tail fins.
+              The Needle is more aerodynamic in appearance and was controlled by the left player's
+              control box. Its thin profile makes it a harder target to hit.
+            </p>
+            <ul>
+              <li><strong>Shape:</strong> Slim, pointed nose</li>
+              <li><strong>Controls:</strong> Left control box</li>
+              <li><strong>Advantage:</strong> Smaller target profile</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>&#9670; The Wedge</h3>
+            <p><span class="badge badge-amber">Player 2</span></p>
+            <p>
+              A broader, wedge-shaped (triangular) spacecraft with a wider body. The Wedge is
+              controlled by the right player and, while a larger target, offers a different
+              visual profile that some players found easier to track during high-speed maneuvers.
+            </p>
+            <ul>
+              <li><strong>Shape:</strong> Wide triangular wedge</li>
+              <li><strong>Controls:</strong> Right control box</li>
+              <li><strong>Advantage:</strong> Easier visual tracking</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Mechanics -->
+      <section class="section" id="mechanics">
+        <h2>Core Game Mechanics</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>&#127776; Gravity Well</h3>
+            <p>A central star exerts real gravitational pull on both ships. Mastering orbital mechanics — slingshot maneuvers, gravity assists, and avoiding collision — is essential to survival.</p>
+          </div>
+          <div class="card">
+            <h3>&#128163; Torpedo Combat</h3>
+            <p>Each ship fires photon torpedoes that travel in straight lines (unaffected by gravity in the original). Torpedoes have limited fuel and eventually fade from the screen.</p>
+          </div>
+          <div class="card">
+            <h3>&#9889; Hyperspace Jump</h3>
+            <p>In desperate situations, activate hyperspace to teleport to a random location. But beware — each jump carries a risk of exploding on re-entry, making it a gamble rather than a guaranteed escape.</p>
+          </div>
+          <div class="card">
+            <h3>&#128293; Thrust &amp; Momentum</h3>
+            <p>Ships have realistic inertia: thrust accelerates you, but you keep drifting until you counter-thrust. There's no friction in space — planning your trajectory is half the battle.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Preview -->
+      <section class="section" id="timeline-preview">
+        <h2>Brief Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1961</div>
+            <div class="timeline-title">The Spark</div>
+            <div class="timeline-desc">MIT receives a donated PDP-1. Steve Russell and friends begin brainstorming a game that would showcase the computer's graphical capabilities, inspired by E.E. "Doc" Smith's Lensman novels.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1962</div>
+            <div class="timeline-title">Spacewar! Is Born</div>
+            <div class="timeline-desc">The first version of Spacewar! runs on the PDP-1. Martin Graetz and Wayne Wiitanen contribute to the design. The game spreads to other PDP-1 installations via paper tape copies.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1962&ndash;1970</div>
+            <div class="timeline-title">Widespread Influence</div>
+            <div class="timeline-desc">Spacewar becomes the most popular program on the PDP-1. Students at Stanford, DEC, and other institutions play and modify it. Nolan Bushnell encounters it at the University of Utah.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1972</div>
+            <div class="timeline-title">First Esports Tournament</div>
+            <div class="timeline-desc">The "Intergalactic Spacewar Olympics" is held at Stanford University's AI Lab — widely considered the first organized video game competition. Rolling Stone magazine covers the event.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1972&ndash;1975</div>
+            <div class="timeline-title">Birth of the Arcade Industry</div>
+            <div class="timeline-desc">Nolan Bushnell and Ted Dabney create Computer Space (1971), the first commercial arcade video game, directly inspired by Spacewar. They found Atari in 1972 and release Pong, launching the arcade era.</div>
+          </div>
+        </div>
+        <p style="text-align:center; margin-top:1.5em;">
+          <a href="history.html" class="btn btn-sm">Read the full history &rarr;</a>
+        </p>
+      </section>
+
+      <!-- Game Gallery -->
+      <section class="section" id="gallery">
+        <h2>Game Gallery</h2>
+        <p class="section-intro">
+          Authentic photographs of Spacewar! running on the restored DEC PDP-1 at the Computer History
+          Museum in Mountain View, California — the same hardware the game was originally written for in 1962.
+        </p>
+        <div class="image-gallery">
+          <div class="image-frame">
+            <img src="images/pdp1-crt-green.jpg" alt="Spacewar! running on PDP-1 Type 30 CRT display with green phosphor" loading="lazy">
+            <div class="image-caption">The iconic green phosphor CRT display in action</div>
+          </div>
+          <div class="image-frame">
+            <img src="images/pdp1-display-closeup.jpg" alt="Close-up of PDP-1 display showing Spacewar! ships and starfield" loading="lazy">
+            <div class="image-caption">Close-up: two ships orbit the central star</div>
+          </div>
+          <div class="image-frame">
+            <img src="images/pdp1-machine.jpg" alt="The DEC PDP-1 minicomputer with Type 30 CRT display running Spacewar!" loading="lazy">
+            <div class="image-caption">The full PDP-1 setup — $120,000 of 1960s computing power</div>
+          </div>
+          <div class="image-frame">
+            <img src="images/pdp1-crt-white.jpg" alt="Spacewar! on PDP-1 with white/amber phosphor display" loading="lazy">
+            <div class="image-caption">Alternate phosphor: the game also ran on white/amber CRTs</div>
+          </div>
+          <div class="image-frame">
+            <img src="images/spacewar-screenshot.jpg" alt="Spacewar! game screenshot showing the title screen and two ships" loading="lazy">
+            <div class="image-caption">Title screen: SPACEWAR! with the Needle and Wedge</div>
+          </div>
+          <div class="image-frame">
+            <img src="images/spacewar-gameplay.jpg" alt="Spacewar! gameplay screenshot showing ships, star, and torpedoes" loading="lazy">
+            <div class="image-caption">Live gameplay: ships, starfield, and photon torpedoes</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section" style="text-align:center;">
+        <div class="highlight-box" style="text-align:left;">
+          <h2 style="border:none; padding:0; margin-top:0;">Ready to Play?</h2>
+          <p>
+            Experience the game that started it all. Play Spacewar in your browser through a PDP-1
+            emulator, or find modern remakes and the Steam version. No downloads required for the
+            browser version.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:1em;">
+            <a href="play.html" class="btn">Play in Browser</a>
+            <a href="gameplay.html" class="btn btn-cyan">Learn the Controls</a>
+            <a href="steam.html" class="btn btn-amber">Steam Version Info</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>SPACEWAR.WIKI</h4>
+          <p>
+            A comprehensive, independently maintained guide to Spacewar! — the 1962 MIT classic
+            that launched the video game industry. Built by enthusiasts, for enthusiasts.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="history.html">History</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="play.html">Play Now</a></li>
+            <li><a href="legacy.html">Legacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="steam.html">Steam FAQ</a></li>
+            <li><a href="faq.html">General FAQ</a></li>
+            <li><a href="https://www.masswerk.at/spacewar/" target="_blank" rel="noopener">PDP-1 Emulator</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Spacewar!" target="_blank" rel="noopener">Wikipedia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html#what-is">What is Spacewar?</a></li>
+            <li><a href="index.html#ships">The Ships</a></li>
+            <li><a href="index.html#mechanics">Mechanics</a></li>
+            <li><a href="index.html#specs">Specifications</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> spacewar.wiki &middot; All rights reserved</p>
+        <p>Not affiliated with Valve, MIT, or Digital Equipment Corporation</p>
+      </div>
+      <p class="footer-disclaimer">
+        Spacewar! is a historically significant video game created by Steve Russell and MIT students in 1962.
+        This site is an independent informational resource. Steam's "Spacewar" (AppID 480) is a separate
+        Valve test application; see our <a href="steam.html">Steam FAQ</a> for details.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

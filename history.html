@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spacewar History — The 1962 MIT Story | Steve Russell, PDP-1 & Origins</title>
+  <meta name="description" content="The complete history of Spacewar! (1962): how Steve Russell and MIT students created the first video game on a PDP-1, the development timeline, and key people.">
+  <meta name="keywords" content="spacewar history, spacewar 1962, steve russell spacewar, spacewar mit, spacewar pdp-1, spacewar origins, first video game history, martin graetz, wayne wiitanen, spacewar developer">
+  <meta name="author" content="spacewar.wiki">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.spacewar.wiki/history.html">
+  <meta name="theme-color" content="#050508">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Spacewar History — The 1962 MIT Story">
+  <meta property="og:description" content="How Steve Russell and MIT students created the first video game on a PDP-1 in 1962.">
+  <meta property="og:url" content="https://www.spacewar.wiki/history.html">
+  <meta property="og:image" content="https://www.spacewar.wiki/images/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spacewar History — The 1962 MIT Story">
+  <meta name="twitter:description" content="How Steve Russell and MIT students created the first video game on a PDP-1.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%2339ff14' stroke-width='3'/><circle cx='50' cy='50' r='6' fill='%2339ff14'/></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.spacewar.wiki/"},{"@type":"ListItem","position":2,"name":"History","item":"https://www.spacewar.wiki/history.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"The History of Spacewar! (1962)","description":"How Steve Russell and MIT students created the first widely played video game on a PDP-1.","author":{"@type":"Organization","name":"spacewar.wiki"},"datePublished":"1962-04-01","publisher":{"@type":"Organization","name":"spacewar.wiki"}}
+  </script>
+</head>
+<body>
+  <div class="starfield"></div>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><span class="nav-brand-icon" aria-hidden="true"></span><span>SPACEWAR.WIKI</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html" class="active">History</a></li>
+        <li><a href="gameplay.html">Gameplay</a></li>
+        <li><a href="play.html">Play Now</a></li>
+        <li><a href="steam.html">Steam FAQ</a></li>
+        <li><a href="legacy.html">Legacy</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">History</span>
+      </div>
+
+      <header class="page-header">
+        <h1>History &amp; Origins</h1>
+        <p class="page-lead">The complete story of how a group of MIT students turned a $120,000 minicomputer into the birthplace of video gaming.</p>
+      </header>
+
+      <!-- The Setting -->
+      <section class="section" id="setting">
+        <h2>The Setting: MIT in 1961</h2>
+        <p>
+          In the summer of 1961, the Massachusetts Institute of Technology received a donation that would
+          change the course of entertainment history: a <strong>Digital Equipment Corporation PDP-1</strong>
+          minicomputer. Donated by DEC founder <strong>Ken Olsen</strong>, the PDP-1 was one of the first
+          commercially available interactive computers — and it came with a <strong>Type 30 CRT display</strong>
+          capable of rendering vector graphics in real time.
+        </p>
+        <p>
+          The PDP-1 was installed in MIT's <strong>Building 26</strong>, home to the university's
+          electrical engineering department. Unlike the massive, batch-processing mainframes of the era,
+          the PDP-1 was designed for <strong>real-time interaction</strong> — a single user could sit at
+          its console and see the results of their programming immediately on the CRT. This was radical
+          for 1961, and it attracted a community of brilliant, curious students who would come to be known
+          as the <strong>Tech Model Railroad Club (TMRC)</strong> and the broader MIT hacker culture.
+        </p>
+
+        <div class="highlight-box">
+          <h3>&#128187; The PDP-1 by the Numbers</h3>
+          <table>
+            <tr><th>Specification</th><th>Value</th></tr>
+            <tr><td>Release Year</td><td>1959 (first delivery 1960)</td></tr>
+            <tr><td>Price</td><td>$120,000 (equivalent to ~$1.2M today)</td></tr>
+            <tr><td>Word Size</td><td>18 bits</td></tr>
+            <tr><td>Memory</td><td>4K words (expandable to 64K)</td></tr>
+            <tr><td>Clock Speed</td><td>~100 kHz (5&ndash;10 microseconds per instruction)</td></tr>
+            <tr><td>Display</td><td>Type 30 CRT, 1024&times;1024 vector resolution</td></tr>
+            <tr><td>Input</td><td>Front panel switches, paper tape reader, control boxes</td></tr>
+          </table>
+        </div>
+
+        <div class="image-frame">
+          <img src="images/pdp1-machine.jpg" alt="The DEC PDP-1 minicomputer with Type 30 CRT display running Spacewar! at the Computer History Museum" loading="lazy">
+          <div class="image-caption">The DEC PDP-1 minicomputer running Spacewar! — the original hardware from 1962, restored at the Computer History Museum</div>
+        </div>
+      </section>
+
+      <!-- The Creators -->
+      <section class="section" id="creators">
+        <h2>The Creators</h2>
+        <p>
+          Spacewar! was not the work of a single genius in isolation — it was a collaborative effort by
+          several MIT students and researchers, each contributing key elements to the final game.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Steve "Slug" Russell</h3>
+            <p><span class="badge badge-green">Lead Developer</span></p>
+            <p>A graduate student in mathematics and computer science, Russell wrote the core code for Spacewar! in late 1961 and early 1962. He was inspired by E.E. "Doc" Smith's Lensman space opera novels and the visual possibilities of the PDP-1's CRT.</p>
+          </div>
+          <div class="card">
+            <h3>Martin Graetz</h3>
+            <p><span class="badge badge-cyan">Co-Designer</span></p>
+            <p>A fellow MIT student who contributed to the game's design and concept. Graetz later wrote one of the definitive historical accounts of Spacewar's creation, documenting the collaborative process at MIT.</p>
+          </div>
+          <div class="card">
+            <h3>Wayne Wiitanen</h3>
+            <p><span class="badge badge-amber">Co-Designer</span></p>
+            <p>Another MIT student involved in the early brainstorming and development. Wiitanen, Graetz, and Russell together formed the core group that conceived and implemented the game on the PDP-1.</p>
+          </div>
+        </div>
+
+        <p>
+          Other contributors included <strong>Dan Edwards</strong>, who optimized the graphics routines and
+          added the gravitational star; <strong>Peter Samson</strong>, who created the "Expensive Planetarium"
+          starfield background; and <strong>Alan Kotok</strong>, who helped with the control boxes. The game
+          was a true product of the MIT hacker community — built collaboratively, shared freely, and improved
+          by anyone who had an idea.
+        </p>
+      </section>
+
+      <!-- Development Timeline -->
+      <section class="section" id="development">
+        <h2>Development Timeline</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">Summer 1961</div>
+            <div class="timeline-title">The PDP-1 Arrives at MIT</div>
+            <div class="timeline-desc">DEC donates a PDP-1 to MIT. Students in the TMRC and electrical engineering department begin exploring its capabilities, particularly the Type 30 CRT display that can render real-time vector graphics.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Fall 1961</div>
+            <div class="timeline-title">The Concept Takes Shape</div>
+            <div class="timeline-desc">Steve Russell, Martin Graetz, and Wayne Wiitanen brainstorm a game that would showcase the PDP-1's graphics. Inspired by Doc Smith's Lensman novels and the visual appeal of space combat, they settle on a two-player spaceship duel with a central star.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Late 1961</div>
+            <div class="timeline-title">First Prototype</div>
+            <div class="timeline-desc">Russell writes the initial version of Spacewar! in PDP-1 assembly language. The first version features two ships that can rotate and thrust, firing torpedoes at each other. The code is approximately 2,000 instructions and takes up about 4K of memory.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Early 1962</div>
+            <div class="timeline-title">Gravity &amp; Hyperspace Added</div>
+            <div class="timeline-desc">Dan Edwards adds the gravitational pull of the central star, transforming the game from a simple shooter into a physics-based orbital combat simulation. The hyperspace jump feature is added as an escape mechanic, with a random explosion risk to balance it.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Spring 1962</div>
+            <div class="timeline-title">Public Debut at MIT Science Open House</div>
+            <div class="timeline-desc">Spacewar! is demonstrated publicly at MIT's annual Science Open House. Visitors line up to play the two-player space combat game. It is an immediate hit and becomes the most popular program on the PDP-1. Custom control boxes are built to make gameplay more comfortable.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1962&ndash;1963</div>
+            <div class="timeline-title">Spread via Paper Tape</div>
+            <div class="timeline-desc">Because there is no commercial distribution, Spacewar! spreads through the small community of PDP-1 owners via paper tape copies. It reaches DEC's own facilities, Stanford Research Institute, Bolt Beranek and Newman (BBN), and other institutions with PDP-1s. Each site modifies and improves the game.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1963&ndash;1970</div>
+            <div class="timeline-title">The "Expensive Planetarium" &amp; Variants</div>
+            <div class="timeline-desc">Peter Samson adds a realistic starfield background called the "Expensive Planetarium" (a joke about the PDP-1's cost). Multiple variants emerge, including versions with different ship designs, additional weapons, and modified physics. The game becomes a cultural touchstone in the early computing community.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Inspiration -->
+      <section class="section" id="inspiration">
+        <h2>What Inspired Spacewar?</h2>
+        <p>
+          Spacewar! did not emerge from a vacuum. Several cultural and technological influences converged
+          at MIT in 1961 to create the perfect conditions for the first video game:
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>&#128214; Doc Smith's Lensman</h3>
+            <p>Steve Russell was an avid fan of E.E. "Doc" Smith's Lensman series, pulp science fiction novels featuring epic space battles between galactic civilizations. The visual imagery of spaceship duels directly inspired Spacewar's core concept.</p>
+          </div>
+          <div class="card">
+            <h3>&#128250; The CRT Display</h3>
+            <p>The PDP-1's Type 30 CRT could draw points and lines in real time — a capability almost no other computer had at the time. The students wanted to create something that would truly demonstrate this graphical capability, and a space game with moving ships was the perfect showcase.</p>
+          </div>
+          <div class="card">
+            <h3>&#128736; MIT Hacker Culture</h3>
+            <p>The Tech Model Railroad Club and the broader MIT hacker ethos valued clever programming, shared knowledge, and building things just because they were cool. Spacewar! was the ultimate "hack" — a program that turned a serious research computer into an entertainment device.</p>
+          </div>
+          <div class="card">
+            <h3>&#128300; Earlier Computer Games</h3>
+            <p>While Spacewar! was the first widely distributed video game, earlier experiments existed: Tennis for Two (1958) on an oscilloscope, the Cathode-Ray Tube Amusement Device (1947) patent, and OXO (1952) tic-tac-toe on EDSAC. These proved computer games were possible, but none achieved Spacewar's reach or influence.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Control Boxes -->
+      <section class="section" id="controls">
+        <h2>The Custom Control Boxes</h2>
+        <p>
+          Initially, Spacewar! was played using the PDP-1's front panel switches — an awkward arrangement
+          that required players to flip toggle switches to rotate, thrust, and fire. Recognizing that this
+          was not ideal for competitive play, MIT students <strong>Alan Kotok</strong> and others built
+          custom <strong>control boxes</strong> that connected to the PDP-1's I/O ports.
+        </p>
+        <p>
+          Each control box featured:
+        </p>
+        <ul>
+          <li><strong>Rotation toggle</strong> — rotate the ship left or right</li>
+          <li><strong>Thrust button</strong> — accelerate forward</li>
+          <li><strong>Fire button</strong> — launch a torpedo</li>
+          <li><strong>Hyperspace button</strong> — teleport to a random location</li>
+        </ul>
+        <p>
+          These custom controllers were arguably the <strong>first gamepads ever built</strong>, predating
+          the Atari 2600 joystick by 15 years. They made Spacewar! significantly more playable and
+          contributed to its popularity at MIT and beyond.
+        </p>
+      </section>
+
+      <!-- Why it matters -->
+      <section class="section" id="why-matters">
+        <h2>Why Spacewar! Matters</h2>
+        <div class="highlight-box amber">
+          <h3>&#127775; The First "Real" Video Game</h3>
+          <p>
+            While earlier computer game experiments exist, Spacewar! was the first to:
+          </p>
+          <ul style="margin-bottom:0;">
+            <li>Be <strong>widely distributed</strong> and played across multiple institutions</li>
+            <li>Feature <strong>real-time graphics</strong> and animation on a display</li>
+            <li>Include <strong>physics simulation</strong> (gravity, inertia, momentum)</li>
+            <li>Support <strong>competitive multiplayer</strong> with dedicated controls</li>
+            <li>Directly <strong>inspire the commercial arcade industry</strong> (Atari, Computer Space)</li>
+            <li>Establish the <strong>space combat genre</strong> that would spawn Asteroids, Star Control, Elite, and countless others</li>
+          </ul>
+        </div>
+        <p style="margin-top:1.5em;">
+          In 2007, Spacewar! was named to the <strong>Library of Congress's National Recording Registry</strong>
+          (in the "Moving Image" category) — the first video game ever to receive this honor. In 2012,
+          the <strong>Smithsonian American Art Museum</strong> featured Spacewar! in its "The Art of Video
+          Games" exhibition, cementing its place as a cultural and artistic landmark.
+        </p>
+      </section>
+
+      <!-- CTA -->
+      <section class="section" style="text-align:center;">
+        <p style="color:var(--text-secondary); margin-bottom:1em;">Continue exploring the Spacewar story:</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+          <a href="legacy.html" class="btn">Legacy &amp; Influence &rarr;</a>
+          <a href="gameplay.html" class="btn btn-cyan">Learn the Gameplay &rarr;</a>
+          <a href="play.html" class="btn btn-amber">Play Spacewar Now &rarr;</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>SPACEWAR.WIKI</h4>
+          <p>A comprehensive guide to Spacewar! — the 1962 MIT classic that launched the video game industry.</p>
+        </div>
+        <div class="footer-col"><h5>Explore</h5><ul><li><a href="history.html">History</a></li><li><a href="gameplay.html">Gameplay</a></li><li><a href="play.html">Play Now</a></li><li><a href="legacy.html">Legacy</a></li></ul></div>
+        <div class="footer-col"><h5>Resources</h5><ul><li><a href="steam.html">Steam FAQ</a></li><li><a href="faq.html">General FAQ</a></li><li><a href="https://www.masswerk.at/spacewar/" target="_blank" rel="noopener">PDP-1 Emulator</a></li><li><a href="https://en.wikipedia.org/wiki/Spacewar!" target="_blank" rel="noopener">Wikipedia</a></li></ul></div>
+        <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html#what-is">What is Spacewar?</a></li><li><a href="index.html#ships">The Ships</a></li><li><a href="index.html#mechanics">Mechanics</a></li><li><a href="history.html#creators">The Creators</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> spacewar.wiki &middot; All rights reserved</p>
+        <p>Not affiliated with Valve, MIT, or Digital Equipment Corporation</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+  <script src="js/app.js"></script>
+</body>
+</html>
